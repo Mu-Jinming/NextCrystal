@@ -1,0 +1,15 @@
+# path: configs/postprocess/default.yaml
+input_csv: ${oc.env:NEXTCRYSTAL_ROOT,.}/outputs/mp_20/wyckoff_predictions_from_top5_sg.csv
+output_csv: ${oc.env:NEXTCRYSTAL_ROOT,.}/outputs/mp_20/postprocessed_assignments_from_top5_sg.csv
+wyckoff_template_path: ${oc.env:NEXTCRYSTAL_ROOT,.}/data/wyckoff_template.json
+
+beam_width: 100
+candidate_count: 4
+# A single worker avoids process-spawn requirements in containers. Set a larger
+# value explicitly for CPU-parallel post-processing.
+max_workers: 1
+max_atom_compos: 600
+
+topn_column: Top-6 Predicted Wyckoff Letters
+sg_number_column: Spacegroup Number
+output_column: Assignments

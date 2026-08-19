@@ -1,0 +1,10 @@
+# path: configs/trainer/wyckoff.yaml
+accelerator: auto
+devices: auto
+strategy: auto
+precision: 32
+max_epochs: 120
+gradient_clip_val: 1.0
+accumulate_grad_batches: 4
+deterministic: true
+log_every_n_steps: 20

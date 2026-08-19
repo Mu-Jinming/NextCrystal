@@ -1,0 +1,17 @@
+# path: configs/data/sg/mp_20.yaml
+train_csv: ${oc.env:NEXTCRYSTAL_ROOT,.}/data/mp_20/train.csv
+val_csv: ${oc.env:NEXTCRYSTAL_ROOT,.}/data/mp_20/val.csv
+test_csv: ${oc.env:NEXTCRYSTAL_ROOT,.}/data/mp_20/test.csv
+
+wyckoff_template_path: ${oc.env:NEXTCRYSTAL_ROOT,.}/data/wyckoff_template.json
+
+formula_column: pretty_formula
+natoms_column: NAtoms
+sg_symbol_column: Spacegroup Symbol
+sg_number_column: Spacegroup Number
+
+max_atoms: 128
+batch_size: 64
+num_workers: 4
+pin_memory: true
+drop_last: false

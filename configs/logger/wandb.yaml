@@ -1,0 +1,7 @@
+# path: configs/logger/wandb.yaml
+enabled: true
+project: wyckoff-open
+name: null
+save_dir: ./outputs
+offline: false
+tags: []

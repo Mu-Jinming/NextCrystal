@@ -1,0 +1,15 @@
+name: nextcrystal
+channels:
+  - pytorch
+  - nvidia
+  - pyg
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pytorch=2.4
+  - pytorch-cuda=12.4
+  - pyg=2.7
+  - pytorch-scatter=2.1
+  - pip
+  - pip:
+      - -e .[nextdiff]

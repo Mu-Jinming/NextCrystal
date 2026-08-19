@@ -1,0 +1,20 @@
+# path: configs/config.yaml
+defaults:
+  - model: default
+  - trainer: sg
+  - logger: wandb
+  - experiment: sg
+  - data/sg: mp_20
+  - data/wyckoff: mp_20
+  - predict/sg: mp_20
+  - predict/wyckoff: mp_20
+  - postprocess: default
+  - _self_
+
+seed: 42
+task: sg
+inference_checkpoint_dir: ${oc.env:NEXTCRYSTAL_ROOT,.}/artifacts/mp_20
+
+early_stopping_monitor: null
+early_stopping_mode: max
+early_stopping_patience: 10

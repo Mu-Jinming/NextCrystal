@@ -1,0 +1,16 @@
+# path: configs/model/default.yaml
+d_model: 256
+nhead: 8
+num_layers: 6
+dim_feedforward: 512
+dropout: 0.1
+max_atoms: 512
+max_multiplicities: 30
+
+use_moe: true
+moe_layers: all
+num_experts: 8
+capacity_factor: 1.5
+router_noisy_std: 0.5
+moe_loss_coef: 0.002
+moe_top_k: 2
