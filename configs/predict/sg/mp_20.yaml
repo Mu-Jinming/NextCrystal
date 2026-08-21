@@ -11,7 +11,7 @@ natoms_column: NAtoms
 sg_symbol_column: Spacegroup Symbol
 sg_number_column: Spacegroup Number
 
-max_atoms: 512
+max_atoms: 128
 batch_size: 256
 top_k: 5
 
@@ -19,7 +19,7 @@ d_model: 256
 nhead: 8
 num_layers: 6
 dim_feedforward: 512
-dropout: 0.1
+dropout: 0.15
 
 use_moe: true
 moe_layers: all

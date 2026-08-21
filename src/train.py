@@ -184,12 +184,12 @@ def main(cfg: DictConfig):
     )
     callbacks.append(checkpoint_callback)
 
-    if cfg.early_stopping_monitor is not None:
+    if cfg.experiment.early_stopping_monitor is not None:
         callbacks.append(
             EarlyStopping(
-                monitor=cfg.early_stopping_monitor,
-                mode=cfg.early_stopping_mode,
-                patience=cfg.early_stopping_patience,
+                monitor=cfg.experiment.early_stopping_monitor,
+                mode=cfg.experiment.early_stopping_mode,
+                patience=cfg.experiment.early_stopping_patience,
             )
         )
 

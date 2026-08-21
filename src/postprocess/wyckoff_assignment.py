@@ -82,6 +82,9 @@ def get_wyckoff_dofs(spacegroup_number, wyckoff_template):
 
 
 def create_atoms(topn_dict_list):
+    # Group individual atom records by element only for bookkeeping.
+    # Each atom remains distinct through its unique id and retains its
+    # own atom-wise Wyckoff probability distribution.
     atoms = defaultdict(list)
     for atom_id, atom_dict in enumerate(topn_dict_list):
         for element, letter_probs in atom_dict.items():
@@ -110,6 +113,9 @@ def expand_atom_letters_with_all_letters(atoms_list, all_letters, eps=MISSING_LE
         atom["letters"] = lp
 
 
+# Element-wise organization of the atom-wise constrained assignment.
+# Candidate states still consist of assignments of individual atom IDs,
+# and their scores are sums of the corresponding atom-level log probabilities.
 def beam_search_assignments_single_element(atoms, letter_multiplicity_dict, fixed_letters, beam_width=200, max_atom_compos=600):
     states = [([], frozenset(), 0.0, frozenset())]
 
@@ -209,6 +215,9 @@ def process_row(row_dict, wyckoff_template, cfg: PostProcessConfig):
 
             final_assignments[element] = formatted_assignments
 
+        # Combine the element-wise candidate sets into complete multi-element
+        # assignments while preserving the accumulated atom-wise scores and
+        # enforcing the global crystallographic occupancy constraints.
         combined_assignments = [("", 0.0, set())]
         for _element, assignments in final_assignments.items():
             new_combined_assignments = []

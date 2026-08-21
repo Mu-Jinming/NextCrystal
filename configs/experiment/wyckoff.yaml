@@ -3,4 +3,4 @@ task: wyckoff
 seed: 42
 early_stopping_monitor: val/f1_macro
 early_stopping_mode: max
-early_stopping_patience: 50
+early_stopping_patience: 10

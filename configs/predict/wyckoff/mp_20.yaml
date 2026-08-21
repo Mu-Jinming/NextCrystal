@@ -12,7 +12,7 @@ sg_number_column: Spacegroup Number
 wyckoff_column: Wyckoff Positions
 
 top_n: 6
-max_atoms: 512
+max_atoms: 128
 max_multiplicities: 30
 batch_size: 64
 # Portable default for containers and restricted HPC login nodes. Increase this
@@ -24,7 +24,7 @@ d_model: 256
 nhead: 8
 num_layers: 6
 dim_feedforward: 512
-dropout: 0.1
+dropout: 0.15
 
 use_moe: true
 moe_layers: all

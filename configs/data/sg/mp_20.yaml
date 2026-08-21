@@ -11,7 +11,7 @@ sg_symbol_column: Spacegroup Symbol
 sg_number_column: Spacegroup Number
 
 max_atoms: 128
-batch_size: 64
+batch_size: 32
 num_workers: 4
 pin_memory: true
 drop_last: false

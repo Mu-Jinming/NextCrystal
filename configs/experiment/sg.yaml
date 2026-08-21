@@ -1,6 +1,6 @@
 # path: configs/experiment/sg.yaml
 task: sg
 seed: 42
-early_stopping_monitor: null
+early_stopping_monitor: val/acc
 early_stopping_mode: max
 early_stopping_patience: 10

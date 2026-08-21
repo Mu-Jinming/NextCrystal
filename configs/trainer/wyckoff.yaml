@@ -2,8 +2,8 @@
 accelerator: auto
 devices: auto
 strategy: auto
-precision: 32
-max_epochs: 120
+precision: 16-mixed
+max_epochs: 200
 gradient_clip_val: 1.0
 accumulate_grad_batches: 4
 deterministic: true

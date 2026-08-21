@@ -14,7 +14,3 @@ defaults:
 seed: 42
 task: sg
 inference_checkpoint_dir: ${oc.env:NEXTCRYSTAL_ROOT,.}/artifacts/mp_20
-
-early_stopping_monitor: null
-early_stopping_mode: max
-early_stopping_patience: 10
